@@ -279,7 +279,7 @@ private fun FormularioNota(vm: NotasViewModel, id: String?, alTerminar: () -> Un
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = menu) },
                 modifier = Modifier.menuAnchor().fillMaxWidth()
             )
-            androidx.compose.material3.ExposedDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+            ExposedDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
                 Cursos.lista.forEach { c ->
                     DropdownMenuItem(text = { Text(c.nombre) }, onClick = { cursoId = c.id; menu = false })
                 }
