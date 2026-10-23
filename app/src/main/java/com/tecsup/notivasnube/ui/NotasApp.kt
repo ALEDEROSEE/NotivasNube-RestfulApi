@@ -196,7 +196,10 @@ private fun Resumen(notas: List<Nota>) {
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold
             )
-            Text("${notas.size} evaluaciones guardadas en api.restful-api.dev", style = MaterialTheme.typography.bodySmall)
+            Text(
+                "${notas.size} " + (if (notas.size == 1) "evaluación guardada" else "evaluaciones guardadas") + " en api.restful-api.dev",
+                style = MaterialTheme.typography.bodySmall
+            )
         }
     }
 }
